@@ -120,7 +120,7 @@ function changeCelsius(e) {
   tempText.innerText = Math.round(temperature.main);
   minText.innerText = Math.round(temperature.min) + neutral;
   maxText.innerText = Math.round(temperature.max) + neutral;
-  this.innerText = neutral;
+  changeUnitBtn.innerText = neutral;
   isCelsius = !isCelsius;
 
   tempTextNodes.forEach(node => {
