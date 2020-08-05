@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="description" content="Local weather for Eduardo Chávez.">
+    <link rel="icon" type="image/png" href="./sw-1.png" sizes="32x32">
+    <title>Weather App || ECB</title>
+  </head>
+  <body>
+      <img src="18.png" alt="">
+    <div class="weather">
+      <button class="rand-color">Random Color</button>
+
+      <header>
+        <div id="ubication">
+          <i class="fas fa-map-marker-alt"></i>
+          <span id="name"></span>, <span id="country"></span>
+        </div>
+        <div id="date">
+          <span id="date-text"></span> <span id="time-text"></span>
+        </div>
+      </header>
+      <div id="temp">
+        <div id="temp-text"></div>
+        <div>
+          <button id="changeUnit"></button>
+        </div>
+      </div>
+
+      <main>
+        <div id="wheather-info">
+          <div id="description-text"></div>
+          <div class="grid">
+            <div id="humidity">
+              <i class="fas fa-tint"></i>
+              <span id="humidity-text"></span>
+            </div>
+            <div id="wind">
+              <i class="fas fa-wind"></i>
+              <span id="wind-text"></span>
+            </div>
+            <div id="min">
+              <i class="fas fa-temperature-low"></i>
+              <span id="min-text"></span>
+            </div>
+            <div id="max">
+              <i class="fas fa-temperature-high"></i>
+              <span id="max-text"></span>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div class="enable-geo">
+        <div class="img"></div>
+        <div class="info">
+            Please, enable <span>geolocation</span>.
+        </div>
+        <a href="https://github.com/eduardochvzb" target="_blank" rel="noopener noreferrer">Eduardo Chávez</a>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

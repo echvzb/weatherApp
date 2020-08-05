@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+@keyframes incrementY {
+  from{
+    transform: scaleY(0);
+  }
+  to{
+    transform: scaleY(1);
+  }
+}
+@keyframes incrementX{
+  from{
+    transform: scaleX(0);
+  }
+  to{
+    transform: scaleX(1);
+  }
+}
+@keyframes clicked{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes increaseXText{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+button.clicked{
+  animation-name: clicked;
+  animation-duration: 300ms;
+}
+.increaseXText{
+  animation-name: increaseXText;
+  animation-duration: 1500ms;
+}
+
+.incrementY{
+  animation-name: incrementY;
+  animation-duration: 2s;
+}
+.incrementX{
+  animation-name: incrementX;
+  animation-duration: 2s;
+}
+
+.incrementY > div{
+  animation-name: fadeIn;
+  animation-duration: 2.8s;
+}
+
+.incrementX > span, .incrementX > i{
+  animation-name: fadeIn;
+  animation-duration: 3s;
+}
+
+:root {
+  --primary: #4a148c;
+  --primary-l: #7c43bd;
+  --primary-bg: linear-gradient(145deg, #43127e, #4f1596);
+  --primary-bg-l: linear-gradient(145deg, #703caa, #8548ca);
+  --text-color: #000051;
+}
+#country {
+  color: var(--primary-l);
+}
+.fas {
+  color: var(--primary);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+header {
+  text-align: center;
+}
+.rand-color{
+  position: absolute;
+  top: 2vh;
+  left: 2rem;
+  background: var(--primary);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+button{
+  border: none;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+#changeUnit {
+  background: var(--primary-l);
+  font-size: 4rem;
+  padding: 0 0.5rem;
+  border-radius: 16px;
+  margin-left: 1rem;
+}
+button:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+button:focus {
+  outline: none;
+}
+#ubication {
+  font-size: 2rem;
+  margin-bottom: 5vh;
+}
+#temp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-bg);
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+#temp,
+#wheather-info {
+  margin: 0 2rem;
+}
+#temp-text {
+  font-size: 7rem;
+}
+#ubication,
+#temp-text,
+#description-text {
+  font-weight: 700;
+}
+#description-text {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+.grid {
+  max-width: 768px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+}
+.grid > div {
+  padding: 0.5rem;
+  background: var(--primary-bg-l);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 16px;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+.grid > div > .fas {
+  color: #fff;
+  font-size: 1.2rem;
+  justify-self: center;
+}
+.weather{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10vh 0;
+  box-sizing: border-box;
+  height: 100%;
+  display: none;
+  max-width: 100vw;
+
+}
+body {
+  height: 100vh;
+  max-width: 100vw;
+}
+.enable-geo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+}
+img{
+  display:none;
+}
+.img{
+  width: 10rem;
+  height: 10rem;
+  background-image: url('ecb-logo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.info{
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+}
+.info > span{
+  color: var(--primary);
+  font-weight: 700;
+}
+a{
+  color: var(--primary-l);
+  text-decoration: none;
+}
+html {
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+  font-size: 20px;
+  color: var(--text-color);
+}
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 14px;
+  }
+}
