@@ -141,10 +141,10 @@ function changeDate() {
   setTimeout(changeDate, 1000);
 }
 async function getWeather(latitude, longitude) {
-  let res = await fetch(
-    `https://fcc-weather-api.glitch.me//api/current?lon=${longitude}&lat=${latitude}`
+  const res = await fetch(
+    `https://weather-proxy.freecodecamp.rocks/api/current?lon=${longitude}&lat=${latitude}`
   );
-  let data = await res.json();
+  const data = await res.json();
 
   return data;
 }
